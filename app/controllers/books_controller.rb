@@ -29,6 +29,8 @@ class BooksController < ApplicationController
 
   # PATCH/PUT /books/1
   def update
+    @book = Book.find(params[:id])
+
     if @book.update(book_params)
       render json: @book
     else
@@ -38,7 +40,18 @@ class BooksController < ApplicationController
 
   # DELETE /books/1
   def destroy
+    @book = Book.find(params[:id])
     @book.destroy
+  end
+
+  def is_reading
+    @book = Book.where({isReading: true})
+    render json: @book
+  end
+
+  def is_read
+    @book = Book.where({isRead: true})
+    render json: @book
   end
 
   private
