@@ -12,6 +12,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def home
+    render json: {message: "welcome"}
+  end
+
   def show
     render json: User.all
   end
