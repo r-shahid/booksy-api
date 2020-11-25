@@ -44,6 +44,11 @@ class BooksController < ApplicationController
     @book.destroy
   end
 
+  def is_tbr
+    @book = Book.where({isTBR: true})
+    render json: @book
+  end
+
   def is_reading
     @book = Book.where({isReading: true})
     render json: @book

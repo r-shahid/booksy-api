@@ -26,8 +26,8 @@ Deployed Frontend
 |Day| Date| Deliverables  | Status |
 |--|--|--|--|
 | 1 | 11/19 | Project Approval |[X]|
-|2|11/20|MVP|[_]|
-|3|11/23|MVP|[_]|
+|2|11/20|MVP|[X]|
+|3|11/23|MVP|[X]|
 |4|11/24|postMVP/Styling|[_]|
 |5|11/30| Presentations| [_] |
 
@@ -65,11 +65,15 @@ Deployed Frontend
 
 ## React Components
 
- - [ ] App
- - [ ] Header
- - [ ] Main
-	 - [ ] Home Page
-	 - [ ] Book Lists
+ - [x] App
+ - [x] Header
+ - [x] Nav
+ - [x] Main
+ - [x] Home Page
+ - [x] Login Form
+ - [x] Signup Form
+ - [x] Book Lists
+ - [ ] About
  - [ ] Footer
 
 
@@ -79,6 +83,7 @@ Deployed Frontend
 
 ![](https://res.cloudinary.com/rshahid/image/upload/v1605764808/capstone/Untitled_drawing_s4rch7.png)
 
+> A few changes: Main and Home also have state. Home renders Nav, Login Form, and Signup Form and Lists renders Header
 
 ## Additional Libraries
 

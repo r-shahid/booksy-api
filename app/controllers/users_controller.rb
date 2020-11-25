@@ -16,6 +16,11 @@ class UsersController < ApplicationController
     render json: User.all
   end
 
+  def destroy
+    @user = User.find_by(username: params[:username])
+    @user.destroy
+  end
+
   # LOGGING IN
   def login
     @user = User.find_by(username: params[:username])
