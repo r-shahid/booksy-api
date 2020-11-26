@@ -50,8 +50,9 @@ My final project at GA is the lovechild of a Trello board and Goodreads. It's a 
 |Learn how to use Materialize| H| 5hrs| 1hr
 |Styling|M|5hrs|8hrs
 |Responsiveness|M|2hrs|1
-|Deployment| H|1hrs|1.5hrs
-|**Total**||37 hrs| 36hrs
+|Deployment| H|1hrs|1.5hrs|
+|About|L|-|1.5hrs
+|**Total**||37 hrs| 37.5hrs
 
 
 ## postMVP
@@ -155,7 +156,7 @@ Stars are filled in by adding a class to stars as needed
 
 I initially wrapped my Login and Sign-up form submit buttons in `<Link>` tags so that users could be taken to the next page after logging in. This caused a lot of errors because it took longer to get data from backend than it did to go to the next page. So, users would end up on the book lists page with no book data or a token to properly log in. 
 
-==Resolution== A ternary operator that redirects to the book lists component only when book data has been received.
+**Resolution** A ternary operator that redirects to the book lists component only when book data has been received.
 
 ```javascript
 {books[0] ? <Redirect to='/lists' /> : console.log('not redirecting')}
@@ -165,10 +166,10 @@ I initially wrapped my Login and Sign-up form submit buttons in `<Link>` tags so
 
 New users would stay stuck on the home page since they don't have any book data and can't trigger the redirect.
 
-==Resolution== When a new user makes an account, a sample book is added for them. 
+**Resolution** When a new user makes an account, a sample book is added for them. 
 
 <hr>
 
 Book lists did not update immediately after onClick events.
 
-==Resolution== I added a click state that is toggled true/false after every onClick event. Click is a dependency of the useEffect that gets book data, so the data is re-rendered and updated every time a book is added, moved, rated, or deleted.
+**Resolution** I added a click state that is toggled true/false after every onClick event. Click is a dependency of the useEffect that gets book data, so the data is re-rendered and updated every time a book is added, moved, rated, or deleted.
